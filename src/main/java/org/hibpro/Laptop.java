@@ -1,10 +1,10 @@
 package org.hibpro;
 
-public class Laptop {
-    public Laptop(){
-        System.out.println("Laptop Constructor");
-    }
+public class Laptop implements Computer {
+//    public Laptop(){
+//        System.out.println("Laptop Constructor");
+//    }
     public void compile(){
-        System.out.println("Laptop compile");
+        System.out.println("Compiling using Laptop");
     }
 }

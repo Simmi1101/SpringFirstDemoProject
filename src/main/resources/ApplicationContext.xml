@@ -5,17 +5,19 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- bean definitions here -->
-    <bean id="alien" class="org.hibpro.Alien">
+    <bean id="alien" class="org.hibpro.Alien" autowire="byName">
+        <property name="age" value="21"/>
+        <property name="com" ref="com"/>
 <!--        <constructor-arg value="21" />-->
 <!--        <constructor-arg ref="lap1"/>-->
 <!--        <constructor-arg value="50000"/>-->
 <!--        <property name="lap" ref="lap1"/>-->
 
-        <constructor-arg index="1" ref="lap1"/>
-        <constructor-arg index="0" value="22"/>
-        <constructor-arg index="2" value="60000"/>
+<!--        <constructor-arg index="1" ref="lap1"/>-->
+<!--        <constructor-arg index="0" value="22"/>-->
+<!--        <constructor-arg index="2" value="60000"/>-->
 
     </bean>
-    <bean id="lap1" class="org.hibpro.Laptop"/>
-    <bean id="lap2" class="org.hibpro.Laptop"/>
+    <bean id="com" class="org.hibpro.Laptop" primary="true"/>
+    <bean id="com2" class="org.hibpro.Desktop" lazy-init="true"/>
 </beans>

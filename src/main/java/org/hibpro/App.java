@@ -13,5 +13,6 @@ public class App
          System.out.println(obj.getAge());
             System.out.println("Salary is:"+ obj.getSalary());
         obj.code();
+        Desktop desktop=(Desktop)context.getBean("com2");
     }
 }
