@@ -5,5 +5,10 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- bean definitions here -->
-    <bean id="alien" class="org.hibpro.Alien"></bean>
+    <bean id="alien" class="org.hibpro.Alien">
+        <property name="age" value="21"></property>
+        <property name="lap" ref="lap1"></property>
+    </bean>
+    <bean id="lap1" class="org.hibpro.Laptop"></bean>
+    <bean id="lap2" class="org.hibpro.Laptop"></bean>
 </beans>
