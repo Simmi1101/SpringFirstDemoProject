@@ -6,9 +6,16 @@
 
     <!-- bean definitions here -->
     <bean id="alien" class="org.hibpro.Alien">
-        <property name="age" value="21"></property>
-        <property name="lap" ref="lap1"></property>
+<!--        <constructor-arg value="21" />-->
+<!--        <constructor-arg ref="lap1"/>-->
+<!--        <constructor-arg value="50000"/>-->
+<!--        <property name="lap" ref="lap1"/>-->
+
+        <constructor-arg index="1" ref="lap1"/>
+        <constructor-arg index="0" value="22"/>
+        <constructor-arg index="2" value="60000"/>
+
     </bean>
-    <bean id="lap1" class="org.hibpro.Laptop"></bean>
-    <bean id="lap2" class="org.hibpro.Laptop"></bean>
+    <bean id="lap1" class="org.hibpro.Laptop"/>
+    <bean id="lap2" class="org.hibpro.Laptop"/>
 </beans>

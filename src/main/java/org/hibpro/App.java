@@ -10,6 +10,8 @@ public class App
          ApplicationContext context=new ClassPathXmlApplicationContext("ApplicationContext.xml");
         //Here, it gives the object
          Alien obj=(Alien) context.getBean("alien");
+         System.out.println(obj.getAge());
+            System.out.println("Salary is:"+ obj.getSalary());
         obj.code();
     }
 }
